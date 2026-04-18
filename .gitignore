@@ -1,0 +1,18 @@
+# Ignore Divi theme zip file after extraction
+Divi/
+divi/
+
+# Ignore extracted theme files
+*.zip.extracted/
+extracted/
+
+# Ignore WordPress files (if applicable)
+wp-content/
+wp-admin/
+wp-includes/
+
+# Common ignores
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
