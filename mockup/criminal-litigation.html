@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criminal Litigation | Soteroula Stavri-Socratous & Co LLC — Paphos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    :root{--green-dark:#2d6b2a;--green-mid:#4a9040;--green-light:#78b865;--green-deep:#1a3e18;--gold:#c9a96d;--gold-dark:#a8893a;--gold-light:#e6d0a0;--dark:#111a10;--cream:#f6f4ef;--cream2:#ede9e0;--white:#ffffff;--gray:#5f6b5e;--gray2:#94a394;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;color:#1e2c1e;background:var(--white);overflow-x:hidden;}
+    .topbar{background:var(--green-deep);border-bottom:1px solid rgba(201,169,109,0.18);padding:8px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1001;}
+    .topbar-left{display:flex;gap:24px;align-items:center;}
+    .topbar-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.65);font-size:12.5px;}
+    .topbar-right{display:flex;gap:10px;align-items:center;}
+    .lang-btn{background:none;border:1px solid rgba(201,169,109,0.25);border-radius:3px;color:rgba(255,255,255,0.55);font-size:11px;font-weight:500;letter-spacing:1px;padding:4px 10px;cursor:pointer;font-family:'Inter',sans-serif;transition:border-color .2s,color .2s;}
+    .lang-btn:hover,.lang-btn.active{border-color:var(--gold);color:var(--gold);}
+    .topbar-wa{display:flex;align-items:center;gap:6px;background:rgba(37,209,102,0.12);border:1px solid rgba(37,209,102,0.28);border-radius:3px;padding:4px 12px;color:#34d27a;font-size:12px;font-weight:500;text-decoration:none;transition:background .2s;}
+    .topbar-wa:hover{background:rgba(37,209,102,0.22);}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);border-bottom:2px solid var(--green-dark);padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;}
+    nav.scrolled{box-shadow:0 4px 24px rgba(45,107,42,0.12);}
+    .nav-logo img{height:50px;width:auto;}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center;}
+    .nav-links a{color:#1e2c1e;text-decoration:none;font-size:13.5px;font-weight:500;position:relative;transition:color .2s;padding-bottom:2px;}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--green-dark);transform:scaleX(0);transform-origin:left;transition:transform .25s;}
+    .nav-links a:hover{color:var(--green-dark);}
+    .nav-links a:hover::after{transform:scaleX(1);}
+    .nav-cta{background:var(--green-dark) !important;color:var(--white) !important;padding:10px 22px;border-radius:3px;font-weight:600 !important;transition:background .2s !important;white-space:nowrap;}
+    .nav-cta::after{display:none !important;}
+    .nav-cta:hover{background:var(--green-mid) !important;}
+    .page-hero{background:linear-gradient(135deg,var(--green-deep) 0%,#0d2010 100%);padding:80px 60px;text-align:center;border-bottom:1px solid rgba(201,169,109,0.15);}
+    .page-hero em{font-style:italic;}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(45,107,42,0.2),transparent);margin:0;}
+    .section{padding:96px 60px;max-width:1200px;margin:0 auto;}
+    .tag{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green-mid);display:block;margin-bottom:10px;}
+    .tag-gold{color:var(--gold);}
+    .h2{font-family:'Playfair Display',serif;font-size:clamp(30px,3.5vw,50px);font-weight:700;line-height:1.15;color:#1a2c1a;margin-bottom:14px;}
+    .h2 em{color:var(--green-dark);font-style:normal;}
+    .h2-white{color:var(--white);}
+    .h2-white em{color:var(--gold);}
+    .lead{font-size:16px;line-height:1.8;color:var(--gray);margin-bottom:48px;}
+    .btn-gold{background:var(--gold);color:var(--dark);font-size:14px;font-weight:700;padding:15px 34px;border-radius:3px;text-decoration:none;box-shadow:0 6px 24px rgba(201,169,109,0.45);transition:background .2s,transform .2s,box-shadow .2s;display:inline-block;}
+    .btn-gold:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 10px 32px rgba(201,169,109,0.55);}
+    .btn-green{background:var(--green-dark);color:var(--white);font-size:14px;font-weight:600;padding:14px 32px;border-radius:3px;text-decoration:none;transition:background .2s,transform .2s;display:inline-block;}
+    .btn-green:hover{background:var(--green-mid);transform:translateY(-2px);}
+    .proc-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px;}
+    .proc-step{background:var(--white);border:1px solid rgba(45,107,42,0.12);border-radius:6px;padding:28px;}
+    .proc-step-num{width:40px;height:40px;border-radius:50%;background:var(--green-dark);color:var(--white);font-family:'Playfair Display',serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+    .proc-step-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--green-deep);margin-bottom:8px;}
+    .proc-step-desc{font-size:13.5px;line-height:1.7;color:var(--gray);}
+    .page-faq-item{border-bottom:1px solid rgba(45,107,42,0.1);}
+    .page-faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:20px;}
+    .page-faq-q-text{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--gold-light);line-height:1.4;}
+    .page-faq-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(201,169,109,0.35);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:16px;flex-shrink:0;transition:transform .3s,background .3s;}
+    .page-faq-item.open .page-faq-icon{transform:rotate(45deg);background:var(--gold);border-color:var(--gold);color:var(--dark);}
+    .page-faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .page-faq-item.open .page-faq-a{max-height:500px;}
+    .page-faq-a-inner{padding:0 0 20px;font-size:14px;line-height:1.8;color:rgba(255,255,255,0.55);}
+    .svc-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .svc-li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--gray);padding:10px 14px;background:rgba(45,107,42,0.04);border-radius:4px;border:1px solid rgba(45,107,42,0.08);}
+    .svc-li::before{content:'✓';color:var(--green-dark);font-weight:700;font-size:13px;flex-shrink:0;}
+    .page-faq-light .page-faq-q-text{color:#1a2c1a;}
+    .page-faq-light .page-faq-icon{border-color:rgba(45,107,42,0.3);color:var(--green-dark);}
+    .page-faq-light .page-faq-item.open .page-faq-icon{background:var(--green-dark);border-color:var(--green-dark);color:var(--white);}
+    .page-faq-light .page-faq-a-inner{color:var(--gray);}
+    footer{background:#0a1a0a;padding:60px 60px 32px;border-top:1px solid rgba(201,169,109,0.12);}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-top{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .footer-logo img{height:46px;filter:brightness(0) invert(1);opacity:.75;margin-bottom:16px;display:block;}
+    .footer-desc{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,0.3);margin-bottom:20px;}
+    .footer-socials{display:flex;gap:9px;}
+    .footer-soc{width:34px;height:34px;border-radius:3px;background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,109,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-size:13px;text-decoration:none;font-weight:700;transition:background .2s,color .2s,border-color .2s;}
+    .footer-soc:hover{background:rgba(45,107,42,0.3);color:var(--gold);border-color:rgba(201,169,109,0.3);}
+    .footer-col h4{color:rgba(255,255,255,0.6);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;}
+    .footer-col ul{list-style:none;}
+    .footer-col li{margin-bottom:9px;}
+    .footer-col a{color:rgba(255,255,255,0.3);font-size:13.5px;text-decoration:none;transition:color .2s;}
+    .footer-col a:hover{color:var(--gold);}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,0.05);}
+    .footer-bottom p{color:rgba(255,255,255,0.18);font-size:12.5px;}
+    .footer-btm-links{display:flex;gap:20px;}
+    .footer-btm-links a{color:rgba(255,255,255,0.18);font-size:12.5px;text-decoration:none;transition:color .2s;}
+    .footer-btm-links a:hover{color:var(--gold);}
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25d166;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 6px 24px rgba(37,209,102,0.45);transition:transform .2s,box-shadow .2s;}
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 10px 32px rgba(37,209,102,0.6);}
+    .cookie{position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--dark);border-top:1px solid rgba(201,169,109,0.15);padding:16px 60px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+    .cookie p{font-size:13px;color:rgba(255,255,255,0.55);max-width:700px;line-height:1.5;}
+    .cookie a{color:var(--gold);text-decoration:none;}
+    .cookie-btns{display:flex;gap:10px;flex-shrink:0;}
+    .cookie-yes{background:var(--green-dark);color:var(--white);border:none;padding:9px 20px;border-radius:3px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;}
+    .cookie-yes:hover{background:var(--green-mid);}
+    .cookie-no{background:none;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.45);padding:9px 20px;border-radius:3px;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease;}
+    .reveal.up{opacity:1;transform:translateY(0);}
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;} .d4{transition-delay:.4s;}
+
+  </style>
+</head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.007.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      +357 2691 0956 &nbsp;/&nbsp; +357 2694 1700
+    </div>
+    <div class="topbar-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@socratouslaw.com
+    </div>
+    <div class="topbar-item">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Mon &ndash; Fri &nbsp;08:00 &ndash; 18:30
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button class="lang-btn active">EN</button>
+    <button class="lang-btn">&#917;&#923;</button>
+    <button class="lang-btn">RU</button>
+    <a href="https://wa.me/35726910956" class="topbar-wa" target="_blank">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</div>
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://georgiosn85.sg-host.com/wp-content/uploads/2025/06/logo-sotia-eng.png" alt="Socratous Law Firm" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+    <span style="display:none;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#2d6b2a;">Socratous Law</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="practice-areas.html">Practice Areas</a></li>
+    <li><a href="index.html#residency">Cyprus Residency</a></li>
+    <li><a href="invest-in-cyprus.html">Invest in Cyprus</a></li>
+    <li><a href="corporate.html">Corporate</a></li>
+    
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Free Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div style="max-width:700px;margin:0 auto;">
+    <div style="font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;"><a href="index.html" style="color:rgba(255,255,255,0.4);text-decoration:none;">Home</a> &nbsp;&rsaquo;&nbsp; <a href="practice-areas.html" style="color:rgba(255,255,255,0.4);text-decoration:none;">Practice Areas</a> &nbsp;&rsaquo;&nbsp; Criminal Litigation</div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:16px;">Criminal <em style="color:var(--gold);font-style:italic;">Litigation</em></h1>
+    <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.75;max-width:580px;margin:0 auto;">Don't face criminal charges alone. From police station to courtroom, we provide strong, strategic, and discreet criminal defence in Cyprus.</p>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--cream);padding:40px 60px;">
+  <div style="max-width:800px;margin:0 auto;background:var(--white);border:2px solid var(--gold);border-radius:6px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start;">
+    <div style="font-size:32px;">&#9888;&#65039;</div>
+    <div>
+      <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--green-deep);margin-bottom:8px;">Early Legal Representation is Critical</div>
+      <p style="font-size:14px;line-height:1.75;color:var(--gray);">The moment you become aware of any investigation, arrest, or potential criminal charges &mdash; contact us immediately. Your rights begin the moment you are questioned. Do not make any statements without your lawyer present.</p>
+      <a href="tel:+35726910956" style="display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:var(--green-dark);color:var(--white);padding:10px 20px;border-radius:3px;text-decoration:none;font-weight:600;font-size:14px;">&#128222; Call Now: +357 2691 0956</a>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--cream);padding:0;">
+  <div class="section">
+    <div class="reveal">
+      <span class="tag">Criminal Defence Services</span>
+      <h2 class="h2">Expert <em>Criminal Defence</em></h2>
+    </div>
+    <ul class="svc-list reveal d2" style="margin-top:32px;">
+      <li class="svc-li">Criminal Defence Representation</li>
+      <li class="svc-li">Police Station Attendance &amp; Advice</li>
+      <li class="svc-li">Bail Applications</li>
+      <li class="svc-li">Drug &amp; Substance Offences</li>
+      <li class="svc-li">Financial Crime &amp; Fraud Defence</li>
+      <li class="svc-li">Assault &amp; Violent Offences</li>
+      <li class="svc-li">Traffic &amp; Road Offences</li>
+      <li class="svc-li">Cybercrime &amp; Digital Offences</li>
+      <li class="svc-li">White-Collar Crime Defence</li>
+      <li class="svc-li">Appeals &amp; Post-Conviction Matters</li>
+    </ul>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--white);padding:0;">
+  <div class="section">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;" class="reveal">
+      <span class="tag">Know Your Rights</span>
+      <h2 class="h2">Your Rights <em>in Cyprus</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;" class="reveal d2">
+      <div style="background:var(--cream);border:1px solid rgba(45,107,42,0.12);border-radius:6px;padding:40px 32px;text-align:center;">
+        <div style="font-size:48px;margin-bottom:20px;">&#129296;</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--green-deep);margin-bottom:12px;">Right to Silence</h3>
+        <p style="font-size:14px;line-height:1.8;color:var(--gray);">You have the right to remain silent. Do not make statements without your lawyer present.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid rgba(45,107,42,0.12);border-radius:6px;padding:40px 32px;text-align:center;">
+        <div style="font-size:48px;margin-bottom:20px;">&#9878;&#65039;</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--green-deep);margin-bottom:12px;">Right to Representation</h3>
+        <p style="font-size:14px;line-height:1.8;color:var(--gray);">You have the right to legal representation from the moment of arrest or questioning.</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid rgba(45,107,42,0.12);border-radius:6px;padding:40px 32px;text-align:center;">
+        <div style="font-size:48px;margin-bottom:20px;">&#128274;</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--green-deep);margin-bottom:12px;">Right to Confidentiality</h3>
+        <p style="font-size:14px;line-height:1.8;color:var(--gray);">All communications between you and your lawyer are strictly protected by legal privilege.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--green-deep);padding:0;">
+  <div class="section" style="text-align:center;">
+    <span class="tag tag-gold">Available When You Need Us</span>
+    <h2 class="h2 h2-white" style="margin-bottom:20px;">Don't Wait. <em>Call Us Now.</em></h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.75;max-width:520px;margin:0 auto 32px;">If you or someone you know has been arrested, is under investigation, or has been charged with a criminal offence in Cyprus &mdash; contact us immediately.</p>
+    <a href="tel:+35726910956" style="display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--dark);padding:16px 36px;border-radius:3px;text-decoration:none;font-weight:700;font-size:16px;margin-right:16px;">&#128222; +357 2691 0956</a>
+    <a href="index.html#contact" class="btn-green">Send a Message &rarr;</a>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--cream);padding:0;">
+  <div class="section">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;" class="reveal">
+      <span class="tag">FAQ</span>
+      <h2 class="h2">Criminal Law <em>Questions</em></h2>
+    </div>
+    <div style="max-width:860px;margin:0 auto;" class="reveal d2 page-faq-light">
+      <div class="page-faq-item"><div class="page-faq-q"><span class="page-faq-q-text">What should I do if I am arrested in Cyprus?</span><span class="page-faq-icon">+</span></div><div class="page-faq-a"><div class="page-faq-a-inner">Stay calm. Do not make any statements or answer questions without your lawyer present. You have the right to remain silent and the right to legal representation. Contact our firm immediately. We will attend the police station, advise you on your rights, and represent you from the very first moment.</div></div></div>
+      <div class="page-faq-item"><div class="page-faq-q"><span class="page-faq-q-text">Can foreigners be represented in criminal cases in Cyprus?</span><span class="page-faq-icon">+</span></div><div class="page-faq-a"><div class="page-faq-a-inner">Yes. We regularly represent EU and non-EU nationals in criminal proceedings. We handle all communication with consulates, embassies, families, and employers, and can advise on the implications for residency status and travel documents.</div></div></div>
+      <div class="page-faq-item"><div class="page-faq-q"><span class="page-faq-q-text">Can a criminal conviction affect my residency status?</span><span class="page-faq-icon">+</span></div><div class="page-faq-a"><div class="page-faq-a-inner">Yes, a conviction can have serious implications for your right to remain in Cyprus, future visa applications, and EU travel. We advise on the immigration consequences from the outset and work to achieve outcomes that protect your status as well as your criminal record.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div style="background:var(--gold);padding:72px 60px;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;">
+    <h2 style="font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--dark);margin-bottom:16px;">Contact a Criminal Defence Lawyer</h2>
+    <p style="font-size:16px;color:rgba(17,26,16,0.65);line-height:1.75;margin-bottom:32px;">Don't face criminal charges alone. Our team is ready to defend your rights.</p>
+    <a href="index.html#contact" class="btn-green" style="font-size:15px;padding:16px 40px;">Contact a Criminal Defence Lawyer &rarr;</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><img src="https://georgiosn85.sg-host.com/wp-content/uploads/2025/06/logo-sotia-eng.png" alt="Socratous Law"></div>
+        <p class="footer-desc">Soteroula Stavri-Socratous &amp; Co LLC &mdash; Cyprus's premier law firm in Paphos. 30+ years of trusted legal excellence for businesses, investors, and families worldwide.</p>
+        <div class="footer-socials">
+          <a class="footer-soc" href="#">f</a>
+          <a class="footer-soc" href="#">in</a>
+          <a class="footer-soc" href="#">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Practice Areas</h4>
+        <ul>
+          <li><a href="corporate.html">Corporate Law</a></li>
+          <li><a href="real-estate.html">Real Estate</a></li>
+          <li><a href="immigration.html">Immigration</a></li>
+          <li><a href="index.html#residency">Permanent Residency</a></li>
+          <li><a href="family-law.html">Family Law</a></li>
+          <li><a href="litigation.html">Litigation</a></li>
+          <li><a href="wills-probate.html">Wills &amp; Probate</a></li>
+          <li><a href="banking-finance.html">Banking &amp; Finance</a></li>
+          <li><a href="ecommerce.html">E-Commerce Law</a></li>
+          <li><a href="criminal-litigation.html">Criminal Litigation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          
+          <li><a href="invest-in-cyprus.html">Invest in Cyprus</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+35726910956">+357 2691 0956</a></li>
+          <li><a href="tel:+35726941700">+357 2694 1700</a></li>
+          <li><a href="mailto:info@socratouslaw.com">info@socratouslaw.com</a></li>
+          <li style="color:rgba(255,255,255,0.3);font-size:13.5px;">7, Kinyra Street, Galaxias Building, 2nd floor, Paphos 8011</li>
+          <li style="color:rgba(255,255,255,0.3);font-size:13.5px;">Mon&ndash;Fri 08:00&ndash;18:30</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Soteroula Stavri-Socratous &amp; Co LLC. All rights reserved.</p>
+      <div class="footer-btm-links">
+        <a href="#">Disclaimer</a>
+        <a href="#">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/35726910956" class="wa-float" target="_blank" title="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="cookie" id="cookieBanner">
+  <p>We use cookies to enhance your experience and analyse site traffic. By clicking &ldquo;Accept&rdquo;, you agree to our <a href="#">Cookie Policy</a> and <a href="#">Privacy Policy</a>.</p>
+  <div class="cookie-btns">
+    <button class="cookie-yes" onclick="document.getElementById('cookieBanner').style.display='none'">Accept All</button>
+    <button class="cookie-no" onclick="document.getElementById('cookieBanner').style.display='none'">Decline</button>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>20);});
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('up');});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.page-faq-q').forEach(q=>q.addEventListener('click',function(){this.parentElement.classList.toggle('open');}));
+</script>
+</body>
+</html>
